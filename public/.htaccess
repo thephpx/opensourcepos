@@ -11,6 +11,7 @@ RewriteEngine On
 # RewriteCond %{HTTP_HOST} !^www\..+$ [NC]
 # RewriteCond %{HTTP_HOST} (.+)$ [NC]
 # RewriteRule ^(.*)$ http://www.%1/$1 [R=301,L]
+RewriteCond %{REQUEST_URI} !/dist/
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 # if in web root
